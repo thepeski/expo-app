@@ -1,3 +1,6 @@
+/* index.jsx */
+
+// default imports
 import { SafeAreaView, Text } from "react-native";
 
 function Index() {
