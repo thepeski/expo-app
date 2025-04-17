@@ -1,10 +1,18 @@
+/* _layout.jsx */
+
+// default imports
 import { Slot } from "expo-router";
 
+// custom imports
 import "../global.css";
+import { ThemeProvider } from "../src/context/ThemeContext";
 
 function _layout() {
     return (
-        <Slot />
+        // provide theme context to app
+        <ThemeProvider>
+            <Slot />
+        </ThemeProvider>
     );
 }
 
