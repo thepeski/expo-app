@@ -15,6 +15,7 @@ function forFile(file, extension) {
 const appErrorBoundaryMessage = forFile("AppErrorBoundary", "jsx");
 const reloadAppMessage = forFile("reloadApp", "js");
 const storageMessage = forFile("storage", "js");
+const themeContext = forFile("ThemeContext", "jsx");
 
 // console logs
 const ConsoleLog = {
@@ -28,6 +29,10 @@ const ConsoleLog = {
 const ConsoleWarn = {
     storage: {
         setNull: storageMessage("cannot set null storage token with key"),
+    },
+    ThemeContext: {
+        userTheme: themeContext("stored user theme missing or invalid"),
+        themeMode: themeContext("stored theme mode missing or invalid")
     }
 };
 
@@ -39,6 +44,11 @@ const ConsoleError = {
         getToken: storageMessage("error getting storage token with key"),
         setToken: storageMessage("error setting storage token with key"),
         deleteToken: storageMessage("error deleting storage token with key")
+    },
+    ThemeContext: {
+        resolveTheme: themeContext("error resolving theme"),
+        changeTheme: themeContext("error changing theme"),
+        toggleThemeMode: themeContext("error toggling theme mode")
     }
 };
 

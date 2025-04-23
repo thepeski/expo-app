@@ -8,13 +8,16 @@ import { Slot } from "expo-router";
 import "../global.css";
 import AppErrorBoundary from "../src/components/AppErrorBoundary";
 import reloadApp from "../src/utils/reloadApp";
+import { ThemeProvider } from "../src/contexts/ThemeContext";
 
 function RootLayout() {
 
     // render app
     return (
         <AppErrorBoundary onRetry={reloadApp}>
-            <Slot />
+            <ThemeProvider>
+                <Slot />
+            </ThemeProvider>
         </AppErrorBoundary>
     );
 }
