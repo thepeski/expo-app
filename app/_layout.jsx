@@ -4,10 +4,14 @@
 // default imports
 import { Slot } from "expo-router";
 
-function RootLayout() {
+// custom imports
+import "../global.css";
 
+function RootLayout() {
     // render app
-    return <Slot />;
+    return (
+        <Slot />
+    );
 }
 
 export default RootLayout;
