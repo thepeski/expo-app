@@ -12,6 +12,7 @@ function forFile(file, extension) {
 }
 
 // define message functions per sets of files & extensions
+const appErrorBoundaryMessage = forFile("AppErrorBoundary", "jsx");
 const reloadAppMessage = forFile("reloadApp", "js");
 
 // console logs
@@ -26,6 +27,7 @@ const ConsoleWarn = {
 
 // console errors
 const ConsoleError = {
+    AppErrorBoundary: appErrorBoundaryMessage("caught error"),
     reloadApp: reloadAppMessage("error reloading app")
 };
 

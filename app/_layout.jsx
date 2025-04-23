@@ -6,11 +6,16 @@ import { Slot } from "expo-router";
 
 // custom imports
 import "../global.css";
+import AppErrorBoundary from "../src/components/AppErrorBoundary";
+import reloadApp from "../src/utils/reloadApp";
 
 function RootLayout() {
+
     // render app
     return (
-        <Slot />
+        <AppErrorBoundary onRetry={reloadApp}>
+            <Slot />
+        </AppErrorBoundary>
     );
 }
 
