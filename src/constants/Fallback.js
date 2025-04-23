@@ -10,6 +10,12 @@ const Fallback = {
         error: "Oops, something went wrong!",
         action: "Retry",
         onAction: reloadApp
+    },
+    loadApp: {
+        loading: "Loading App...",
+        error: "We couldn't load the app",
+        action: "Reload",
+        onAction: reloadApp
     }
 };
 
