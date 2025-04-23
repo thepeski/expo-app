@@ -2,44 +2,46 @@
 // rendered by root layout
 
 // default imports
-import { SafeAreaView, View, Text, Button } from "react-native";
+import { useEffect } from "react";
+import { useRouter } from "expo-router";
 
 // custom imports
 import { useBootstrap } from "../src/hooks/useBootstrap";
+import { useAuth } from "../src/contexts/AuthContext";
 import { useTheme } from "../src/contexts/ThemeContext";
 import FallbackScreen from "../src/components/FallbackScreen";
 import Fallback from "../src/constants/Fallback";
-import Theme from "../src/constants/Theme";
 
 function App() {
+    const router = useRouter();
 
     // load data required on statup
     const { bootReady, bootError } = useBootstrap();
 
+    // auth state variables & methods
+    const { user, isAuthLoading, authError } = useAuth();
+
     // theme state variables & methods
-    const {
-        theme,
-        userTheme,
-        systemTheme,
-        themeMode,
-        isThemeLoading,
-        themeError,
-        changeTheme,
-        toggleThemeMode
-    } = useTheme();
+    const { isThemeLoading, themeError } = useTheme();
+
+    useEffect(() => {
+        if (!isAuthLoading && !isThemeLoading) {
+            router.replace(user ? "Home" : "Login");
+        }
+    }, [user, isAuthLoading, isThemeLoading, router]);
 
     // show error or loading screen
-    if (bootError || themeError) {
+    if (bootError || authError || themeError) {
         return (
             <FallbackScreen
                 loading={false}
-                error={bootError || themeError}
+                error={bootError || authError || themeError}
                 message={Fallback.loadApp.error}
                 action={Fallback.loadApp.action}
                 onAction={Fallback.loadApp.onAction}
             />
         );
-    } else if (!bootReady || isThemeLoading) {
+    } else if (!bootReady || isAuthLoading || isThemeLoading) {
         return (
             <FallbackScreen
                 loading={true}
@@ -49,20 +51,7 @@ function App() {
         );
     }
 
-    return (
-        <SafeAreaView className="flex-1 justify-center items-center">
-            <Text className="text-2xl font-lbb">Hello world!</Text>
-            <View className="my-4">
-                <Text>theme: {theme}</Text>
-                <Text>user theme: {userTheme}</Text>
-                <Text>system theme: {systemTheme}</Text>
-                <Text>mode: {themeMode}</Text>
-            </View>
-            <Button title="Light Mode" onPress={() => changeTheme(Theme.name.light)} />
-            <Button title="Dark Mode" onPress={() => changeTheme(Theme.name.dark)} />
-            <Button title="Toggle Theme Mode" onPress={() => toggleThemeMode()} />
-        </SafeAreaView>
-    );
+    return null;
 }
 
 export default App;

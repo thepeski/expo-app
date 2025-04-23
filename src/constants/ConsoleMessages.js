@@ -13,6 +13,8 @@ function forFile(file, extension) {
 
 // define message functions per sets of files & extensions
 const appErrorBoundaryMessage = forFile("AppErrorBoundary", "jsx");
+const auth = forFile("auth", "js");
+const authContext = forFile("AuthContext", "jsx");
 const reloadAppMessage = forFile("reloadApp", "js");
 const storageMessage = forFile("storage", "js");
 const themeContext = forFile("ThemeContext", "jsx");
@@ -22,6 +24,10 @@ const ConsoleLog = {
     storage: {
         setToken: storageMessage("set storage token with key"),
         deleteToken: storageMessage("deleted storage token with key")
+    },
+    auth: {
+        signOutFirebase: auth("logged out"),
+        forgotFirebase: auth("sent password reset email")
     }
 };
 
@@ -49,6 +55,18 @@ const ConsoleError = {
         resolveTheme: themeContext("error resolving theme"),
         changeTheme: themeContext("error changing theme"),
         toggleThemeMode: themeContext("error toggling theme mode")
+    },
+    auth: {
+        signUpFirebase: auth("error signing up with email & password"),
+        signInFirebase: auth("error signing in with email & password"),
+        signOutFirebase: auth("error logging out"),
+        forgotFirebase: auth("error sending password reset email")
+    },
+    AuthContext: {
+        signUp: authContext("error signing up"),
+        signIn: authContext("error signing in"),
+        signOut: authContext("error signing out"),
+        forgot: authContext("error forgot password")
     }
 };
 
