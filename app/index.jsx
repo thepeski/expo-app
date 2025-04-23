@@ -37,7 +37,7 @@ function App() {
 
     return (
         <SafeAreaView>
-            <Text className="text-xl">Hello world!</Text>
+            <Text className="text-xl font-l">Hello world!</Text>
         </SafeAreaView>
     );
 }
