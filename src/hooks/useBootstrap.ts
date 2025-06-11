@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 
 // src imports
 import { Logger } from "@dev";
+import { loadFonts } from "@utils"; // toggle fonts success/crash
 
 // imitate data loading
 async function startupTask() {
@@ -50,6 +51,7 @@ function useBootstrap() {
             try {
                 // run startup tasks
                 await startupTask();
+                await loadFonts();
 
                 // boot successful
                 setIsEffectLoading(false);
