@@ -1,15 +1,13 @@
 /* index.tsx */
 // rendered by root layout
 
-// react imports
-import { SafeAreaView, Text } from "react-native";
+// src imports
+import { App } from "@screens";
 
-function App() {
+function Index() {
     return (
-        <SafeAreaView>
-            <Text>Hello, world!</Text>
-        </SafeAreaView>
+        <App />
     );
 }
 
-export default App;
+export default Index;
