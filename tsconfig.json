@@ -19,6 +19,7 @@
       "@fonts/*": ["assets/fonts/*"],
       "@hooks": ["src/hooks/index.ts"],
       "@screens": ["src/screens/index.ts"],
+      "@services": ["src/services/index.ts"],
       "@utils": ["src/utils/index.ts"],
     }
   },
