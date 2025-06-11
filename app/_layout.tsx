@@ -2,10 +2,10 @@
 // root layout
 
 // expo imports
-import { Slot } from "expo-router";
+import { Stack } from "expo-router";
 
 function RootLayout() {
-    return <Slot />;
+    return <Stack screenOptions={{ headerShown: false }} />;
 }
 
 export default RootLayout;
