@@ -16,6 +16,7 @@
       "@components": ["src/components/index.ts"],
       "@constants": ["src/constants/index.ts"],
       "@dev": ["src/dev/index.ts"],
+      "@hooks": ["src/hooks/index.ts"],
       "@screens": ["src/screens/index.ts"],
       "@utils": ["src/utils/index.ts"],
     }

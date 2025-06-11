@@ -13,6 +13,7 @@ module.exports = function (api) {
                         "@components": "./src/components",
                         "@constants": "./src/constants",
                         "@dev": "./src/dev",
+                        "@hooks": "./src/hooks",
                         "@screens": "./src/screens",
                         "@utils": "./src/utils",
                     },
