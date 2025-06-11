@@ -1,8 +1,15 @@
 /* @constants/themes.ts */
+// color themes
 
 // define types
+type ThemeModesType = keyof typeof themeModes;
 type ThemesType = keyof typeof themes;
 type ThemeType = typeof themes[ThemesType];
+
+const themeModes = {
+    system: "system",
+    user: "user"
+};
 
 // define themes
 const themes = {
@@ -26,4 +33,4 @@ const themes = {
     }
 }
 
-export { ThemesType, ThemeType, themes };
+export { ThemeModesType, ThemesType, ThemeType, themeModes, themes };
