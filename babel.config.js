@@ -12,6 +12,7 @@ module.exports = function (api) {
                     extensions: [".js", ".jsx", ".ts", ".tsx"],
                     alias: {
                         "@components": "./src/components",
+                        "@dev": "./src/dev",
                     },
                 },
             ],

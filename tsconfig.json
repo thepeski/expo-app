@@ -13,7 +13,8 @@
     "forceConsistentCasingInFileNames": true,
     "allowSyntheticDefaultImports": true,
     "paths": {
-      "@components": ["src/components/index.ts"]
+      "@components": ["src/components/index.ts"],
+      "@dev": ["src/dev/index.ts"]
     }
   },
   "include": [
