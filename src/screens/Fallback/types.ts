@@ -5,7 +5,7 @@ type FallbackType = {
     error?: boolean,
     message?: string,
     action?: string,
-    onAction?: void
+    onAction?: () => void;
 };
 
 export default FallbackType;
