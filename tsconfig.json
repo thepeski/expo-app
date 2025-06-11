@@ -11,7 +11,10 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "forceConsistentCasingInFileNames": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "@components": ["src/components/index.ts"]
+    }
   },
   "include": [
     "**/*.ts",
