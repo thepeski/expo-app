@@ -19,6 +19,7 @@
       "@dev": ["src/dev/index.ts"],
       "@fonts/*": ["assets/fonts/*"],
       "@hooks": ["src/hooks/index.ts"],
+      "@icons/*": ["assets/icons/*"],
       "@screens": ["src/screens/index.ts"],
       "@services": ["src/services/index.ts"],
       "@utils": ["src/utils/index.ts"],
