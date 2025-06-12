@@ -1,5 +1,5 @@
 /* @views/ScrollView/ScrollView.tsx */
-// custom scroll view with custom headers & animations
+// scroll view with custom headers & animations
 
 // react imports
 import { useRef } from "react";
