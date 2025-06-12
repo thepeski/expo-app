@@ -8,9 +8,9 @@ const app = [
             {
                 group: "Fallback",
                 routes: [
-                    { label: "Loading", path: "test/screens/FallbackLoadingTest" },
-                    { label: "Error", path: "test/screens/FallbackErrorTest" },
-                    { label: "Null", path: "test/screens/FallbackNullTest" }
+                    { label: "Loading", path: "test/screens/Fallback/FallbackLoadingTest" },
+                    { label: "Error", path: "test/screens/Fallback/FallbackErrorTest" },
+                    { label: "Null", path: "test/screens/Fallback/FallbackNullTest" }
                 ]
             },
             
