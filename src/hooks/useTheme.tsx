@@ -37,14 +37,14 @@ function ThemeProvider({ children }: { children: React.ReactNode }) {
         return mode in themeModes;
     }
 
-    // resolve stored theme
+    // return valid theme object
     async function getResolvedTheme(): Promise<ThemeType> {
         const storedTheme = await getStorageToken(storage.theme) ?? themes.light.name;
 
         return isValidThemeName(storedTheme) ? themes[storedTheme] : themes.light;
     }
 
-    // resolve stored theme mode
+    // return valid theme mode name
     async function getResolvedThemeMode(): Promise<string> {
         const storedThemeMode = await getStorageToken(storage.themeMode) ?? themeModes.system;
 
@@ -125,7 +125,7 @@ function ThemeProvider({ children }: { children: React.ReactNode }) {
 
         try {
 
-            // store & change theme if changed
+            // store & set theme if changed
             if (theme.name !== newThemeName) {
                 await setStorageToken(storage.theme, newThemeName);
 
@@ -134,7 +134,7 @@ function ThemeProvider({ children }: { children: React.ReactNode }) {
                 logger.info(`changed theme to: ${newThemeName}`);
             }
 
-            // store new theme mode if changed
+            // store & set theme mode to user
             if (themeMode !== themeModes.user) {
                 await setStorageToken(storage.themeMode, themeModes.user);
 
@@ -148,32 +148,32 @@ function ThemeProvider({ children }: { children: React.ReactNode }) {
         }
     }
 
-    // toggle between system & user mode
-    async function changeThemeMode(newThemeModeName: string) {
+    // change theme mode
+    async function changeThemeMode(newThemeMode: string) {
 
         // resolve theme mode name
-        const resolvedThemeModeName = isValidThemeMode(newThemeModeName) ?
-            newThemeModeName : themeModes.system;
+        const resolvedThemeMode = isValidThemeMode(newThemeMode) ?
+            newThemeMode : themeModes.system;
 
         // do not change theme mode if already set
-        if (themeMode === resolvedThemeModeName) {
+        if (themeMode === resolvedThemeMode) {
             logger.info(`theme mode ${themeMode} already active`);
 
             return;
         }
 
-        // change to system theme mode
-        if (resolvedThemeModeName === themeModes.system) {
+        // set system theme mode
+        if (resolvedThemeMode === themeModes.system) {
             try {
 
                 // store new theme mode
-                await setStorageToken(storage.themeMode, resolvedThemeModeName);
+                await setStorageToken(storage.themeMode, resolvedThemeMode);
 
                 setThemeMode(themeModes.system);
 
-                logger.info(`changed theme mode to: ${resolvedThemeModeName}`);
+                logger.info(`changed theme mode to: ${resolvedThemeMode}`);
 
-                // change theme if different
+                // set theme if changed
                 if (theme.name !== systemTheme.name) {
                     setTheme(systemTheme);
 
@@ -184,21 +184,21 @@ function ThemeProvider({ children }: { children: React.ReactNode }) {
                 setThemeError(error);
             }
         }
-        // change to user theme mode
+        // set user theme mode
         else {
             try {
 
                 // store new theme mode
-                await setStorageToken(storage.themeMode, resolvedThemeModeName);
+                await setStorageToken(storage.themeMode, resolvedThemeMode);
 
                 setThemeMode(themeModes.user);
 
-                logger.info(`changed theme mode to: ${resolvedThemeModeName}`);
+                logger.info(`changed theme mode to: ${resolvedThemeMode}`);
 
                 // resolve stored theme
                 const resolvedTheme = await getResolvedTheme();
 
-                // change theme if different
+                // set theme if changed
                 if (theme.name !== resolvedTheme.name) {
                     setTheme(resolvedTheme);
 
