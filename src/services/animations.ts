@@ -29,14 +29,15 @@ const animations = {
     scale: {
         bounce: (
             scale: SharedValue<number>,
-            min: number,
-            max: number,
-            options?: { damping?: number, stiffness?: number }
+            min?: number,
+            max?: number,
+            damping?: number, 
+            stiffness?: number
         ) => {
             scale.value = withSequence(
                 withSpring(
-                    max ?? 1.2,
-                    { damping: options?.damping ?? 8, stiffness: options?.stiffness ?? 500 }
+                    max ?? 1.12,
+                    { damping: damping ?? 8, stiffness: stiffness ?? 500 }
                 ),
                 withSpring(min ?? 1)
             )
