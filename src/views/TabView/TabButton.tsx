@@ -35,7 +35,7 @@ function TabButton({
     }));
 
     return (
-        
+
         // tab container
         <Pressable
             onPress={() => {
@@ -68,12 +68,14 @@ function TabButton({
             </Animated.View>
 
             {/* tab label */}
-            <Text style={[
-                { color: isActive ? activeColor : inactiveColor },
-                styles?.tabLabel
-            ]}>
-                {label}
-            </Text>
+            {label &&
+                <Text style={[
+                    { color: isActive ? activeColor : inactiveColor },
+                    styles?.tabLabel
+                ]}>
+                    {label}
+                </Text>
+            }
         </Pressable>
     );
 }
