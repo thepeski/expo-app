@@ -23,7 +23,8 @@
       "@images/*": ["assets/images/*"],
       "@screens": ["src/screens/index.ts"],
       "@services": ["src/services/index.ts"],
-      "@utils": ["src/utils/index.ts"]
+      "@utils": ["src/utils/index.ts"],
+      "@views": ["src/views/index.ts"],
     }
   },
   "include": [
