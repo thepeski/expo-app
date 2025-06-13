@@ -10,6 +10,7 @@ import { loadFonts } from "@utils";
 
 // local imports
 import { useAuth } from "./useAuth";
+import { useTheme } from "./useTheme";
 
 // imitate startup task
 async function startupTask() {
@@ -34,12 +35,13 @@ function useBootstrap() {
 
     // add other hooks here
     const { isAuthLoading, authError } = useAuth();
+    const { isThemeLoading, themeError } = useTheme();
 
     // loading indocators
-    const isBootLoading = isEffectLoading || isAuthLoading;
+    const isBootLoading = isEffectLoading || isAuthLoading || isThemeLoading;
 
     // error indicators
-    const bootError = effectError || authError;
+    const bootError = effectError || authError || themeError;
 
     // master check
     const bootReady = !isBootLoading && !bootError;
@@ -47,7 +49,8 @@ function useBootstrap() {
     // log auth hooks status
     useEffect(() => {
         if (!isAuthLoading) logger.info("auth tasks completed");
-    }, [isAuthLoading]);
+        if (!isThemeLoading) logger.info("theme tasks completed");
+    }, [isAuthLoading, isThemeLoading]);
 
     // run startup tasks
     useEffect(() => {
