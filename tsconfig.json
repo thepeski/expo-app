@@ -25,7 +25,8 @@
     "**/*.tsx"
   ],
   "exclude": [
-    "babel.config.js"
+    "babel.config.js",
+    "firebaseConfig.js"
   ],
   "extends": [
     "expo/tsconfig.base"
