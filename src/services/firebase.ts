@@ -4,6 +4,7 @@
 // firebase imports
 import { auth } from "@firebaseConfig";
 import {
+    onAuthStateChanged,
     User,
     createUserWithEmailAndPassword,
     signInWithEmailAndPassword,
@@ -17,6 +18,20 @@ import { Logger } from "@dev";
 const logger = new Logger("firebase.ts");
 
 const firebase = {
+    authListener: (
+        setUser: (user: any) => void,
+        setIsAuthLoading: (value: boolean) => void,
+        setAuthError: (value: string | null) => void
+    ) => {
+        return onAuthStateChanged(auth, async (user) => {
+            setUser(user ?? null);
+            setAuthError(null);
+
+            setTimeout(() => {
+                setIsAuthLoading(false);
+            }, 1000);
+        })
+    },
     signUp: async (email: string, password: string): Promise<User | null> => {
         try {
             const userObject = await createUserWithEmailAndPassword(auth, email, password);
