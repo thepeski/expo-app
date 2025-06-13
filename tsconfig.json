@@ -14,6 +14,7 @@
     "allowSyntheticDefaultImports": true,
     "paths": {
       "@dev": ["src/dev/index.ts"],
+      "@firebaseConfig": ["firebaseConfig.js"],
       "@fonts/*": ["assets/fonts/*"],
       "@services": ["src/services/index.ts"],
       "@utils": ["src/utils/index.ts"]

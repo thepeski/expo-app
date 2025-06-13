@@ -11,6 +11,7 @@ module.exports = function (api) {
                     extensions: [".js", ".jsx", ".ts", ".tsx"],
                     alias: {
                         "@dev": "./src/dev",
+                        "@firebaseConfig": "./firebaseConfig",
                         "@fonts": "./assets/fonts",
                         "@services": "./src/services",
                         "@utils": "./src/utils",
