@@ -3,6 +3,7 @@
 
 // react imports
 import { Animated } from "react-native";
+import { SharedValue, withSequence, withSpring } from "react-native-reanimated";
 
 const animations = {
     headers: {
@@ -23,6 +24,14 @@ const animations = {
                     extrapolate: "clamp"
                 })
             };
+        }
+    },
+    tabs: {
+        bounce: (
+            scale: SharedValue<number>, min = 1, max = 1.12, damping = 8, stiffness = 500) => {
+            scale.value = withSequence(
+                withSpring(max, { damping: damping, stiffness: stiffness }), withSpring(min)
+            )
         }
     }
 }
