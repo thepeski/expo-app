@@ -14,6 +14,7 @@
     "allowSyntheticDefaultImports": true,
     "paths": {
       "@dev": ["src/dev/index.ts"],
+      "@fonts/*": ["assets/fonts/*"],
       "@utils": ["src/utils/index.ts"]
     }
   },
