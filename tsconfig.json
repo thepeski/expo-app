@@ -13,6 +13,7 @@
     "forceConsistentCasingInFileNames": true,
     "allowSyntheticDefaultImports": true,
     "paths": {
+      "@constants": ["src/constants/index.ts"],
       "@contexts": ["src/contexts/index.ts"],
       "@dev": ["src/dev/index.ts"],
       "@firebaseConfig": ["firebaseConfig.js"],

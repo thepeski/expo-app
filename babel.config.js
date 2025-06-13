@@ -10,6 +10,7 @@ module.exports = function (api) {
                 {
                     extensions: [".js", ".jsx", ".ts", ".tsx"],
                     alias: {
+                        "@constants": "./src/constants",
                         "@contexts": "./src/contexts",
                         "@dev": "./src/dev",
                         "@firebaseConfig": "./firebaseConfig",
