@@ -18,6 +18,7 @@
       "@firebaseConfig": ["firebaseConfig.js"],
       "@fonts/*": ["assets/fonts/*"],
       "@hooks": ["src/hooks/index.ts"],
+      "@images/*": ["assets/images/*"],
       "@services": ["src/services/index.ts"],
       "@utils": ["src/utils/index.ts"]
     }
