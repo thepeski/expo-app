@@ -21,7 +21,7 @@ function TextInput({ placeholder, type, value, onChangeText, styles, options }: 
 
     // trigger on focus change
     useEffect(() => {
-        animations.forms.ease(isFocused, x, options?.duration);
+        animations.universal.ease(isFocused, x, options?.duration);
     }, [isFocused]);
 
     // resolve color type

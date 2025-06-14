@@ -7,14 +7,6 @@ import { SharedValue, withSequence, withSpring } from "react-native-reanimated";
 
 const animations = {
     forms: {
-        ease: (trigger: boolean, x: Animated.Value, duration = 100) => {
-            Animated.timing(x, {
-                toValue: trigger ? 1 : 0,
-                duration: duration,
-                easing: Easing.out(Easing.quad),
-                useNativeDriver: false,
-            }).start();
-        },
         backgroundColor: (x: Animated.Value, inactive: string, active: string) => {
             return {
                 backgroundColor: x.interpolate({
@@ -78,6 +70,16 @@ const animations = {
             scale.value = withSequence(
                 withSpring(max, { damping: damping, stiffness: stiffness }), withSpring(min)
             )
+        },
+    },
+    universal: {
+        ease: (trigger: boolean, x: Animated.Value, duration = 100) => {
+            Animated.timing(x, {
+                toValue: trigger ? 1 : 0,
+                duration: duration,
+                easing: Easing.out(Easing.quad),
+                useNativeDriver: false,
+            }).start();
         },
     }
 }

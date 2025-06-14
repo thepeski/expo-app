@@ -20,7 +20,7 @@ function Button({ label, type, icon, onPress, styles, options }: ButtonType) {
 
     // trigger on focus change
     useEffect(() => {
-        animations.forms.ease(isActive, x, options?.duration);
+        animations.universal.ease(isActive, x, options?.duration);
     }, [isActive]);
 
     // resolve color type
