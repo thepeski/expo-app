@@ -78,6 +78,71 @@ const themes = {
                     text: "#f8d3db",
                     textActive: "#fbe9ed"
                 }
+            },
+            textInput: {
+                default: {
+                    background: "transparent",
+                    backgroundActive: "transparent",
+                    border: "#8c8c8c",
+                    borderActive: "#4b4b4b",
+                    placeholder: "#8c8c8c",
+                    text: "#262626",
+                    textActive: "#000000"
+                },
+                primary: {
+                    background: "transparent",
+                    backgroundActive: "transparent",
+                    border: "#8c8c8c",
+                    borderActive: "#007aff",
+                    placeholder: "#8c8c8c",
+                    text: "#262626",
+                    textActive: "#000000"
+                },
+                secondary: {
+                    background: "transparent",
+                    backgroundActive: "transparent",
+                    border: "#8c8c8c",
+                    borderActive: "#e58c35",
+                    placeholder: "#8c8c8c",
+                    text: "#262626",
+                    textActive: "#000000"
+                },
+                third: {
+                    background: "transparent",
+                    backgroundActive: "transparent",
+                    border: "#8c8c8c",
+                    borderActive: "#5e55f0",
+                    placeholder: "#8c8c8c",
+                    text: "#262626",
+                    textActive: "#000000"
+                },
+                success: {
+                    background: "transparent",
+                    backgroundActive: "transparent",
+                    border: "#8c8c8c",
+                    borderActive: "#77c561",
+                    placeholder: "#8c8c8c",
+                    text: "#262626",
+                    textActive: "#000000"
+                },
+                warning: {
+                    background: "transparent",
+                    backgroundActive: "transparent",
+                    border: "#8c8c8c",
+                    borderActive: "#f1c927",
+                    placeholder: "#8c8c8c",
+                    text: "#262626",
+                    textActive: "#000000"
+                },
+                error: {
+                    background: "transparent",
+                    backgroundActive: "transparent",
+                    border: "#8c8c8c",
+                    borderActive: "#dc3055",
+                    placeholder: "#8c8c8c",
+                    text: "#262626",
+                    textActive: "#000000"
+                }
             }
         }
     },
@@ -147,6 +212,71 @@ const themes = {
                     borderActive: "#f4bec9",
                     text: "#160408",
                     textActive: "#2c070f"
+                }
+            },
+            textInput: {
+                default: {
+                    background: "transparent",
+                    backgroundActive: "transparent",
+                    border: "#4b4b4b",
+                    borderActive: "#8c8c8c",
+                    placeholder: "#4b4b4b",
+                    text: "#e6e6e6",
+                    textActive: "#f2f2f2"
+                },
+                primary: {
+                    background: "transparent",
+                    backgroundActive: "transparent",
+                    border: "#4b4b4b",
+                    borderActive: "#007aff",
+                    placeholder: "#4b4b4b",
+                    text: "#e6e6e6",
+                    textActive: "#f2f2f2"
+                },
+                secondary: {
+                    background: "transparent",
+                    backgroundActive: "transparent",
+                    border: "#4b4b4b",
+                    borderActive: "#e58c35",
+                    placeholder: "#4b4b4b",
+                    text: "#e6e6e6",
+                    textActive: "#f2f2f2"
+                },
+                third: {
+                    background: "transparent",
+                    backgroundActive: "transparent",
+                    border: "#4b4b4b",
+                    borderActive: "#5e55f0",
+                    placeholder: "#4b4b4b",
+                    text: "#e6e6e6",
+                    textActive: "#f2f2f2"
+                },
+                success: {
+                    background: "transparent",
+                    backgroundActive: "transparent",
+                    border: "#4b4b4b",
+                    borderActive: "#77c561",
+                    placeholder: "#4b4b4b",
+                    text: "#e6e6e6",
+                    textActive: "#f2f2f2"
+                },
+                warning: {
+                    background: "transparent",
+                    backgroundActive: "transparent",
+                    border: "#4b4b4b",
+                    borderActive: "#f1c927",
+                    placeholder: "#4b4b4b",
+                    text: "#e6e6e6",
+                    textActive: "#f2f2f2"
+                },
+                error: {
+                    background: "transparent",
+                    backgroundActive: "transparent",
+                    border: "#4b4b4b",
+                    borderActive: "#dc3055",
+                    placeholder: "#4b4b4b",
+                    text: "#e6e6e6",
+                    textActive: "#f2f2f2"
                 }
             }
         }
