@@ -79,6 +79,15 @@ const themes = {
                     textActive: "#fbe9ed"
                 }
             },
+            card: {
+                default: {
+                    background: "#f8f8f8",
+                    backgroundActive: "#fbfbfb",
+                    border: "#ffffff",
+                    borderActive: "#ffffff",
+                    shadow: "#000000"
+                }
+            },
             textInput: {
                 default: {
                     background: "transparent",
@@ -212,6 +221,15 @@ const themes = {
                     borderActive: "#f4bec9",
                     text: "#160408",
                     textActive: "#2c070f"
+                }
+            },
+            card: {
+                default: {
+                    background: "#0a0a0a",
+                    backgroundActive: "#0d0d0d",
+                    border: "#131313",
+                    borderActive: "#191919",
+                    shadow: "#ffffff"
                 }
             },
             textInput: {
