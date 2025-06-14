@@ -6,7 +6,7 @@ import { Animated, Easing } from "react-native";
 import { SharedValue, withSequence, withSpring } from "react-native-reanimated";
 
 const animations = {
-    button: {
+    forms: {
         ease: (trigger: boolean, x: Animated.Value, duration = 100) => {
             Animated.timing(x, {
                 toValue: trigger ? 1 : 0,

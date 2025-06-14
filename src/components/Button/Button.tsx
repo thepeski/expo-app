@@ -20,23 +20,23 @@ function Button({ label, type, icon, onPress, styles, options }: ButtonType) {
 
     // trigger on focus change
     useEffect(() => {
-        animations.button.ease(isActive, x, options?.duration);
+        animations.forms.ease(isActive, x, options?.duration);
     }, [isActive]);
 
     // resolve color type
     const colors = theme.colors.button[type ?? "default"];
 
-    const backgroundColor = animations.button.backgroundColor(
+    const backgroundColor = animations.forms.backgroundColor(
         x, colors.background, colors.backgroundActive
     );
 
-    const borderColor = animations.button.borderColor(
+    const borderColor = animations.forms.borderColor(
         x, colors.border, colors.borderActive
     )
 
     const borderWidth = options?.border?.on ? options.border.width ? options.border.width : 2 : 0;
 
-    const textColor = animations.button.color(
+    const textColor = animations.forms.color(
         x, colors.text, colors.textActive
     )
 
