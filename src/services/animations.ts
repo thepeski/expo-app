@@ -2,10 +2,56 @@
 // react animated animations
 
 // react imports
-import { Animated } from "react-native";
+import { Animated, Easing } from "react-native";
 import { SharedValue, withSequence, withSpring } from "react-native-reanimated";
 
 const animations = {
+    button: {
+        ease: (trigger: boolean, x: Animated.Value, duration = 100) => {
+            Animated.timing(x, {
+                toValue: trigger ? 1 : 0,
+                duration: duration,
+                easing: Easing.out(Easing.quad),
+                useNativeDriver: false,
+            }).start();
+        },
+        backgroundColor: (x: Animated.Value, inactive: string, active: string) => {
+            return {
+                backgroundColor: x.interpolate({
+                    inputRange: [0, 1],
+                    outputRange: [inactive, active],
+                    extrapolate: "clamp"
+                })
+            }
+        },
+        borderColor: (x: Animated.Value, inactive: string, active: string) => {
+            return {
+                borderColor: x.interpolate({
+                    inputRange: [0, 1],
+                    outputRange: [inactive, active],
+                    extrapolate: "clamp"
+                })
+            }
+        },
+        borderRadius: (x: Animated.Value, inactive: number, active: number) => {
+            return {
+                borderRadius: x.interpolate({
+                    inputRange: [0, 1],
+                    outputRange: [inactive, active],
+                    extrapolate: "clamp"
+                })
+            }
+        },
+        color: (x: Animated.Value, inactive: string, active: string) => {
+            return {
+                color: x.interpolate({
+                    inputRange: [0, 1],
+                    outputRange: [inactive, active],
+                    extrapolate: "clamp"
+                })
+            }
+        }
+    },
     headers: {
         fadeIn: (x: Animated.Value, inputRange = { min: 0, max: 1 }) => {
             return {
@@ -32,7 +78,7 @@ const animations = {
             scale.value = withSequence(
                 withSpring(max, { damping: damping, stiffness: stiffness }), withSpring(min)
             )
-        }
+        },
     }
 }
 
