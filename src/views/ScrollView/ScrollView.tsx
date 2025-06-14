@@ -48,12 +48,11 @@ function ScrollView({ headers, animations, styles, options, children }: ScrollVi
         <>
             {/* container */}
             <Animated.View
-                style={{
-                    height: heightOutput,
-                    minHeight: headerHeight.collapsed,
-                    ...scrollViewStyles.container,
-                    ...(styles?.container ?? {})
-                }}
+                style={[
+                    { height: heightOutput, minHeight: headerHeight.collapsed },
+                    scrollViewStyles.container,
+                    styles?.container ?? {}
+                ]}
             >
 
                 {/* headers */}
