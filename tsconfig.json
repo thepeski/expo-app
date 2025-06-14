@@ -20,6 +20,7 @@
       "@firebaseConfig": ["firebaseConfig.js"],
       "@fonts/*": ["assets/fonts/*"],
       "@hooks": ["src/hooks/index.ts"],
+      "@icons/*": ["assets/icons/*"],
       "@images/*": ["assets/images/*"],
       "@screens": ["src/screens/index.ts"],
       "@services": ["src/services/index.ts"],

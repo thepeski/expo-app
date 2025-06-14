@@ -17,6 +17,7 @@ module.exports = function (api) {
                         "@firebaseConfig": "./firebaseConfig",
                         "@fonts": "./assets/fonts",
                         "@hooks": "./src/hooks",
+                        "@icons": "./assets/icons",
                         "@images": "./assets/images",
                         "@screens": "./src/screens",
                         "@services": "./src/services",
