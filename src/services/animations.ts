@@ -6,6 +6,43 @@ import { Animated, Easing } from "react-native";
 import { SharedValue, withSequence, withSpring } from "react-native-reanimated";
 
 const animations = {
+    card: {
+        backgroundColor: (x: Animated.Value, inactive: string, active: string) => {
+            return {
+                backgroundColor: x.interpolate({
+                    inputRange: [0, 1],
+                    outputRange: [inactive, active],
+                    extrapolate: "clamp"
+                })
+            }
+        },
+        borderColor: (x: Animated.Value, inactive: string, active: string) => {
+            return {
+                borderColor: x.interpolate({
+                    inputRange: [0, 1],
+                    outputRange: [inactive, active],
+                    extrapolate: "clamp"
+                })
+            }
+        },
+        shadow: (x: Animated.Value, inactive = 2, active = 8) => ({
+            shadowOpacity: x.interpolate({
+                inputRange: [0, 1],
+                outputRange: [0, 0.03],
+                extrapolate: "clamp",
+            }),
+            shadowRadius: x.interpolate({
+                inputRange: [0, 1],
+                outputRange: [0, 8],
+                extrapolate: "clamp",
+            }),
+            elevation: x.interpolate({
+                inputRange: [0, 1],
+                outputRange: [inactive, active],
+                extrapolate: "clamp",
+            }),
+        })
+    },
     forms: {
         backgroundColor: (x: Animated.Value, inactive: string, active: string) => {
             return {
