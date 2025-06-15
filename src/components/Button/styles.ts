@@ -9,6 +9,7 @@ const buttonStyles = StyleSheet.create({
         borderRadius: 20
     },
     label: {
+        justifyContent: "center",
         fontSize: 15,
         fontFamily: "latoBold",
         fontWeight: "700"
