@@ -14,13 +14,15 @@ import { HandlePressType, RenderTabIconType } from "./types";
 function handlePress({ router, activePath, path, scale, options }: HandlePressType) {
 
     // bounce
-    animations.tabs.bounce(
-        scale,
-        options?.bounce?.min,
-        options?.bounce?.max,
-        options?.bounce?.damping,
-        options?.bounce?.stiffness
-    );
+    if (options?.bounce?.on) {
+        animations.tabs.bounce(
+            scale,
+            options.bounce.min,
+            options.bounce.max,
+            options.bounce.damping,
+            options.bounce.stiffness
+        );
+    }
 
     // trigger haptics
     hapticFeedback(options?.haptics?.on ?? false, options?.haptics?.style);
