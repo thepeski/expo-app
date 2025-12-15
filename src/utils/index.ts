@@ -1,2 +1,3 @@
 /* @utils */
 
+export * from "./loadFonts";
