@@ -1,2 +1,3 @@
 /* @services */
 
+export * from "./storage";
