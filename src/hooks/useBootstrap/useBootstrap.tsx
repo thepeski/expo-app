@@ -6,6 +6,7 @@ import { useEffect } from "react";
 
 // src
 import { Logger } from "@dev";
+import { loadFonts } from "@utils";
 
 // local
 import { startupTask, useBootStatus } from "./logic";
@@ -28,6 +29,7 @@ function useBootstrap(): Props {
             try {
                 // startup tasks
                 await startupTask();
+                await loadFonts();
 
                 log.info("startup tasks completed");
             } catch (e) {
