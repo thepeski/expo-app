@@ -11,7 +11,25 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "forceConsistentCasingInFileNames": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "@components": ["src/components/index.ts"],
+      "@constants": ["src/constants/index.ts"],
+      "@contexts": ["src/contexts/index.ts"],
+      "@dev": ["src/dev/index.ts"],
+      "@firebaseConfig": ["firebaseConfig.js"],
+      "@fonts/*": ["assets/fonts/*"],
+      "@hooks": ["src/hooks/index.ts"],
+      "@icons/*": ["assets/icons/*"],
+      "@images/*": ["assets/images/*"],
+      "@layouts": ["src/layouts/index.ts"],
+      "@screens": ["src/screens/index.ts"],
+      "@services": ["src/services/index.ts"],
+      "@styles": ["src/styles/index.ts"],
+      "@types": ["src/types/index.ts"],
+      "@utils": ["src/utils/index.ts"],
+      "@views": ["src/views/index.ts"]
+    },
   },
   "include": [
     "**/*.ts",
