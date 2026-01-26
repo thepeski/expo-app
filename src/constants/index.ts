@@ -6,6 +6,7 @@ export * from "./height";
 export * from "./motion";
 export * from "./opacity";
 export * from "./radius";
+export * from "./sizes";
 export * from "./spacing";
 export * from "./themes";
 export * from "./z";
