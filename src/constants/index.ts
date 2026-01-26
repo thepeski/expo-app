@@ -9,6 +9,7 @@ export * from "./opacity";
 export * from "./radius";
 export * from "./sizes";
 export * from "./spacing";
+export * from "./storageKeys";
 export * from "./themes";
 export * from "./typo";
 export * from "./z";
