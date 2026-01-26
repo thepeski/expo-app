@@ -8,15 +8,17 @@ import { SafeAreaProvider } from "react-native-safe-area-context";
 import { Slot } from "expo-router";
 
 // src
-import { useBoot } from "@hooks";
+import { ThemeProvider, useBoot } from "@hooks";
 
 function Root() {
     useBoot();
 
     return (
-        <SafeAreaProvider>
-            <Slot />
-        </SafeAreaProvider>
+        <ThemeProvider>
+            <SafeAreaProvider>
+                <Slot />
+            </SafeAreaProvider>
+        </ThemeProvider>
     );
 }
 
