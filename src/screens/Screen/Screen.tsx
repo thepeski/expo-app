@@ -15,7 +15,7 @@ import { Props } from "./types";
 
 function Screen({ variant, keyboardDismiss, padding, styles, children, ...rest }: Props) {
     const { theme } = useTheme();
-    const s = useMemo(() => makeStyles(theme, variant, padding), [variant, padding]);
+    const s = useMemo(() => makeStyles(theme, variant, padding), [theme, variant, padding]);
 
     const container = (
         <SafeAreaView {...rest} style={[s.container, styles?.container]}>
