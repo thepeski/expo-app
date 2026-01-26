@@ -2,6 +2,7 @@
 
 export * from "./border";
 export * from "./colors";
+export * from "./fallback";
 export * from "./fonts";
 export * from "./height";
 export * from "./motion";
