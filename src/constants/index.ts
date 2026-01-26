@@ -8,6 +8,7 @@ export * from "./height";
 export * from "./motion";
 export * from "./opacity";
 export * from "./radius";
+export * from "./scale";
 export * from "./sizes";
 export * from "./spacing";
 export * from "./storageKeys";
