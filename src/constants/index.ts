@@ -12,5 +12,6 @@ export * from "./spacing";
 export * from "./storageKeys";
 export * from "./themeModes";
 export * from "./themes";
+export * from "./transitions";
 export * from "./typo";
 export * from "./z";
