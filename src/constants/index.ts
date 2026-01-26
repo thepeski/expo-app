@@ -7,3 +7,4 @@ export * from "./opacity";
 export * from "./radius";
 export * from "./spacing";
 export * from "./themes";
+export * from "./z";
