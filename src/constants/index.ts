@@ -1,2 +1,3 @@
 /* @constants */
 
+export * from "./colors";
