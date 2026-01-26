@@ -1,2 +1,3 @@
 /* @contexts */
 
+export * from "./ThemeContext";
